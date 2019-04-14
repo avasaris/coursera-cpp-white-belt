@@ -3,10 +3,61 @@
 
 #include "pch.h"
 #include <iostream>
+#include <string>
+#include <vector>
+#include <map>
+
+using namespace std;
+
+
+
 
 int main()
 {
-    std::cout << "Hello World!\n"; 
+	vector<string> buses_order;
+	map<string, vector<string>> buses;
+
+	int q;
+	cin >> q;
+
+	for (; q-- > 0;) {
+		string operation_code;
+		cin >> operation_code;
+
+
+
+		if (operation_code == "NEW_BUS") {
+			
+			string new_bus;
+			int stops;
+			cin >> new_bus >> stops;
+
+			buses_order.push_back(new_bus);
+			buses[new_bus].resize(stops);
+
+			for (auto &stop : buses[new_bus]) cin >> stop;
+		}
+
+		else if (operation_code == "ALL_BUSES") {
+
+			if (buses.size() == 0) {
+				cout << "No buses\n";
+			}
+			else {
+				for (const auto & bus : buses) {
+					cout << "Bus " << bus.first << ":";
+					for (const auto & stop : bus.second) {
+						cout << " " << stop;
+					}
+					cout << endl;
+				}
+			}
+		}
+
+		
+	}
+
+    
 }
 
 // Запуск программы: CTRL+F5 или меню "Отладка" > "Запуск без отладки"

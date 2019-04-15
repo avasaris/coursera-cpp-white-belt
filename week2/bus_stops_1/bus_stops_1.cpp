@@ -1,4 +1,5 @@
-﻿#include <iostream>
+﻿#include "pch.h"
+#include <iostream>
 #include <string>
 #include <vector>
 #include <map>
@@ -7,7 +8,6 @@ using namespace std;
 
 int main()
 {
-	vector<string> buses_order;
 	map<string, vector<string>> buses;
 	map<string, vector<string>> stops;
 
@@ -19,12 +19,10 @@ int main()
 		cin >> operation_code;
 
 		if (operation_code == "NEW_BUS") {
-			
+
 			string new_bus;
 			int stop_cnt;
 			cin >> new_bus >> stop_cnt;
-
-			buses_order.push_back(new_bus);
 
 			for (; stop_cnt-- > 0;) {
 				string new_stop;
@@ -49,15 +47,37 @@ int main()
 
 		}
 
+		else if (operation_code == "STOPS_FOR_BUS") {
+
+			string bus;
+			cin >> bus;
+
+			if (buses.find(bus) != buses.end()) {
+				for (const auto & stop : buses[bus]) {
+					cout << "Stop " << stop << ":";
+					if (stops[stop].size() > 1) {
+						for (const auto & another_bus : stops[stop]) if (bus != another_bus) cout << " " << another_bus;
+						cout << endl;
+					}
+					else {
+						cout << " no interchange\n";
+					}
+				}
+			}
+			else {
+				cout << "No bus\n";
+			}
+		}
+
 		else if (operation_code == "ALL_BUSES") {
 
 			if (buses.size() == 0) {
 				cout << "No buses\n";
 			}
 			else {
-				for (const auto & bus : buses) {
-					cout << "Bus " << bus.first << ":";
-					for (const auto & stop : bus.second) {
+				for (const auto &[bus, bus_stops] : buses) {
+					cout << "Bus " << bus << ":";
+					for (const auto & stop : bus_stops) {
 						cout << " " << stop;
 					}
 					cout << endl;
@@ -69,7 +89,7 @@ int main()
 			cout << "\nError: Unrecognized input\n";
 			return 1;
 		}
-		
+
 	}
 
 	return 0;

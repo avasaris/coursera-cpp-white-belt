@@ -20,8 +20,11 @@ int main()
 		string path;
 		getline(cin, path);
 
-		if (bus_paths.find(path) != bus_paths.end()) {
-			int new_num = bus_paths.size();
+		//cout << "path='" << path << "'\n";
+		//cout << "bus_paths.size=" << bus_paths.size() << endl;
+
+		if (bus_paths.find(path) == bus_paths.end()) {
+			int new_num = bus_paths.size() + 1;
 			bus_paths[path] = new_num;
 			cout << "New bus " << new_num << endl;
 		}

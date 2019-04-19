@@ -17,20 +17,14 @@ public:
 		// получить имя и фамилию по состоянию на конец года year
 		bool haveName = false;
 		string ret_name = "";
-		while (name.find(year) == ) {
-
-		}
-		if (name.lower_bound(year) != name.end()) {
-			ret_name = name.lower_bound(year)->second;
-			haveName = true;
-		}
+		for (auto n : name)
+			if (n.first <= year) ret_name = n.second, haveName = true;
 
 		bool haveSurname = false;
 		string ret_surname = "";
-		if (surname.lower_bound(year) != surname.end()) {
-			ret_surname = surname.lower_bound(year)->second;
-			haveSurname = true;
-		}
+		for (auto s : surname)
+			if (s.first <= year) ret_surname = s.second, haveSurname = true;
+
 
 		if (haveName && haveSurname) {
 			return ret_name + " " + ret_surname;

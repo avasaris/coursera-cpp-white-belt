@@ -62,7 +62,7 @@ public:
 		}
 	}
 
-	string GetFullNameWithHistory(int year) {
+	string GetFullNameWithHistory(int year) const {
 		// получить все имена и фамилии по состоянию на конец года year
 		if (year >= birth_year) {
 			bool haveName = false;

@@ -29,7 +29,7 @@ using namespace std;
 
 class Circus {
 public:
-	int CountAnimalTypes()  {
+	int CountAnimalTypes() const {
 		int animal_type_count = 0;
 		for (const auto& item : animals_by_type) {
 			if (HasAnimalType(item.first)) {
@@ -53,8 +53,8 @@ public:
 	}
 
 private:
-	bool HasAnimalType(const string& type) {
-		return !animals_by_type[type].empty();
+	bool HasAnimalType(const string& type) const {
+		return !animals_by_type.at(type).empty();
 	}
 
 	map<string, set<string>> animals_by_type;

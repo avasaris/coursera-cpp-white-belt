@@ -11,6 +11,10 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Name_Surname_2", "Name_Surn
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Quiz_const_method", "Quiz_const_method\Quiz_const_method.vcxproj", "{559DAD7F-279C-4FBA-856E-84C089DE1C13}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "reversible_string_1", "reversible_string_1\reversible_string_1.vcxproj", "{A0222025-682A-4085-85EF-980FCE16838E}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Name_Surname_3", "Name_Surname_3\Name_Surname_3.vcxproj", "{DA4E452F-D8C7-465F-8092-3334622AA193}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -51,6 +55,22 @@ Global
 		{559DAD7F-279C-4FBA-856E-84C089DE1C13}.Release|x64.Build.0 = Release|x64
 		{559DAD7F-279C-4FBA-856E-84C089DE1C13}.Release|x86.ActiveCfg = Release|Win32
 		{559DAD7F-279C-4FBA-856E-84C089DE1C13}.Release|x86.Build.0 = Release|Win32
+		{A0222025-682A-4085-85EF-980FCE16838E}.Debug|x64.ActiveCfg = Debug|x64
+		{A0222025-682A-4085-85EF-980FCE16838E}.Debug|x64.Build.0 = Debug|x64
+		{A0222025-682A-4085-85EF-980FCE16838E}.Debug|x86.ActiveCfg = Debug|Win32
+		{A0222025-682A-4085-85EF-980FCE16838E}.Debug|x86.Build.0 = Debug|Win32
+		{A0222025-682A-4085-85EF-980FCE16838E}.Release|x64.ActiveCfg = Release|x64
+		{A0222025-682A-4085-85EF-980FCE16838E}.Release|x64.Build.0 = Release|x64
+		{A0222025-682A-4085-85EF-980FCE16838E}.Release|x86.ActiveCfg = Release|Win32
+		{A0222025-682A-4085-85EF-980FCE16838E}.Release|x86.Build.0 = Release|Win32
+		{DA4E452F-D8C7-465F-8092-3334622AA193}.Debug|x64.ActiveCfg = Debug|x64
+		{DA4E452F-D8C7-465F-8092-3334622AA193}.Debug|x64.Build.0 = Debug|x64
+		{DA4E452F-D8C7-465F-8092-3334622AA193}.Debug|x86.ActiveCfg = Debug|Win32
+		{DA4E452F-D8C7-465F-8092-3334622AA193}.Debug|x86.Build.0 = Debug|Win32
+		{DA4E452F-D8C7-465F-8092-3334622AA193}.Release|x64.ActiveCfg = Release|x64
+		{DA4E452F-D8C7-465F-8092-3334622AA193}.Release|x64.Build.0 = Release|x64
+		{DA4E452F-D8C7-465F-8092-3334622AA193}.Release|x86.ActiveCfg = Release|Win32
+		{DA4E452F-D8C7-465F-8092-3334622AA193}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

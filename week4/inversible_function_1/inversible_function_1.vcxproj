@@ -118,6 +118,9 @@
     <ClCompile Include="inversible_function_1.cpp" />
     <ClCompile Include="inversible_function_2.cpp" />
   </ItemGroup>
+  <ItemGroup>
+    <Text Include="Text.txt" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

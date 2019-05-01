@@ -1,0 +1,39 @@
+class FunctionParts {
+public:
+	FunctionParts(char new_sign, double new_value) {
+		sign = new_sign;
+		value = new_value;
+	}
+	void Invert() {
+		if (sign == '+') sign = '-'; else sign = '+';
+	}
+	double Apply(double inp_val) const {
+		if (sign == '+') {
+			cout << inp_val << '+' << value << endl;
+			inp_val += value;
+		}
+		else {
+			cout << inp_val << '-' << value << endl;
+			inp_val -= value;
+		}
+		return inp_val;
+	}
+private:
+	char sign;
+	double value;
+};
+
+class Function {
+public:
+	double Apply(double value) {
+		for (auto part : parts) value = part.Apply(value);
+		return value;
+	}
+	void Invert() {
+		for (auto& part : parts) part.Invert();
+		reverse(begin(parts), end(parts));
+	}
+	void AddPart(char sign, double value) { parts.push_back({ sign, value }); }
+private:
+	vector<FunctionParts> parts;
+};

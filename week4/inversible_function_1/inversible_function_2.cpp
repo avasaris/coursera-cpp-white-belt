@@ -1,5 +1,6 @@
 #include <iostream>
 #include <vector>
+#include <algorithm>
 
 using namespace std;
 
@@ -42,7 +43,7 @@ private:
 
 class Function {
 public:
-	double Apply(double value) {
+	double Apply(double value) const {
 		for (auto part : parts) value = part.Apply(value);
 		return value;
 	}
